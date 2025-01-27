@@ -231,7 +231,7 @@ public class ReadmeEditor : Editor
 
         Handles.BeginGUI();
         Handles.color = LinkStyle.normal.textColor;
-        Handles.DrawLine(new Vector3(position.xMin, position.yMax), new Vector3(position.xMax, position.yMax));
+        Handles.DrawLine(new UnityEngine.Vector3(position.xMin, position.yMax), new UnityEngine.Vector3(position.xMax, position.yMax));
         Handles.color = Color.white;
         Handles.EndGUI();
 

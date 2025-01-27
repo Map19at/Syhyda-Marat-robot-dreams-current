@@ -1,18 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Lesson2 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  [SerializeField] private int _firstIntegerNumber;
+  [SerializeField] private int _secondIntegerNumber;
+  [SerializeField] private float _firstFloatNumber;
+  [SerializeField] private string _firstText;
+  [SerializeField] private MyVector3 _firstVector;
+  [SerializeField] private ColorSwatch _colorSwatch;
+  
+  private float _hiddenNumber;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+  [ContextMenu("Hello Mapat")]
+  private void HelloWorld()
+  {
+    Debug.Log("Hello Mapat");
+    Debug.Log("Hello Marat");
+  }
+
+  [ContextMenu("Add")]
+  private void Add()
+  {
+    int result = _firstIntegerNumber + _secondIntegerNumber;
+    Debug.Log(result);
+  }
+}  
+    
+

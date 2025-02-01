@@ -3,35 +3,40 @@ using UnityEngine;
 
 public class Lection3Controller : MonoBehaviour
 {
-    [SerializeField] private int _value;
+    [SerializeField] private List<int> numbers = new List<int>();
 
-    [SerializeField] private List<int> _list;
-
-    [ContextMenu("Print")]
-    public void Print()
+    [ContextMenu("Show List")]
+    public void ShowList()
     {
-        if (_list == null || _list.Count == 0)
-        {
-            Debug.Log("List is empty");
-            return;
-        }
-
-        string msg = string.Join(", ", _list);
-        Debug.Log("List: " + msg);
+        Debug.Log(numbers.Count == 0 ? "List is Empty" : string.Join(", ", numbers));
     }
 
-    [ContextMenu("Remove Last Element")]
-    public void RemoveLastElement()
+    [ContextMenu("Add Number")]
+    public void AddNumber()
     {
-        if (_list != null && _list.Count > 0)
-        {
-            _list.RemoveAt(_list.Count - 1);
-            Debug.Log("Last element removed");
-        }
-        else
-        {
-            Debug.Log("List is empty, nothing to remove.");
-        }
+        numbers.Add(Random.Range(0, 100));
+        Debug.Log("Number added");
+    }
+
+    [ContextMenu("Remove Last")]
+    public void RemoveLast()
+    {
+        if (numbers.Count > 0) numbers.RemoveAt(numbers.Count - 1);
+        Debug.Log("Number removed");
+    }
+
+    [ContextMenu("Clear List")]
+    public void ClearList()
+    {
+        numbers.Clear();
+        Debug.Log("List is empty");
+    }
+
+    [ContextMenu("Sort List")]
+    public void SortList()
+    {
+        numbers.Sort();
+        Debug.Log("List is sorted");
     }
 }
     

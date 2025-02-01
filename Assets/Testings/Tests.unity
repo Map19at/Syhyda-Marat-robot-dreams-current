@@ -227,6 +227,8 @@ GameObject:
   - component: {fileID: 1184106152}
   - component: {fileID: 1184106151}
   - component: {fileID: 1184106150}
+  - component: {fileID: 1184106153}
+  - component: {fileID: 1184106154}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -308,6 +310,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1184106153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184106149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228dffb7e15a51643a9dbfcfef9cfdd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1184106154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184106149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bb1ff17be954743be228eeb2c4ae32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _num: 6
+  _word: Mapat
+  _nums: 19
+  numbers: 000000000000000000000000
+  words:
+  - 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

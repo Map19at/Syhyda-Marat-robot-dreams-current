@@ -4,6 +4,7 @@ using UnityEngine;
 public class Lection3Controller : MonoBehaviour
 {
     [SerializeField] private List<int> numbers = new List<int>();
+    [SerializeField] private int _number;
 
     [ContextMenu("Show List")]
     public void ShowList()
@@ -15,14 +16,15 @@ public class Lection3Controller : MonoBehaviour
     public void AddNumber()
     {
         numbers.Add(Random.Range(0, 100));
-        Debug.Log("Number added");
+        numbers.Add(_number);
+        Debug.Log("Number added: " + _number);
     }
 
     [ContextMenu("Remove Last")]
-    public void RemoveLast()
+    public void RmoveLast()
     {
-        if (numbers.Count > 0) numbers.RemoveAt(numbers.Count - 1);
-        Debug.Log("Number removed");
+        numbers.Remove(_number);
+        Debug.Log("Number removed: " + _number);
     }
 
     [ContextMenu("Clear List")]

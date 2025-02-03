@@ -15,9 +15,15 @@ public class Lection3Controller : MonoBehaviour
     [ContextMenu("Add Number")]
     public void AddNumber()
     {
-        numbers.Add(Random.Range(0, 100));
         numbers.Add(_number);
         Debug.Log("Number added: " + _number);
+    }
+    
+    [ContextMenu("Add Random Number")]
+    public void AddRandomNumber()
+    {
+        numbers.Add(Random.Range(0, 100));
+        Debug.Log("Random number added: " + _number);
     }
 
     [ContextMenu("Remove Last")]
